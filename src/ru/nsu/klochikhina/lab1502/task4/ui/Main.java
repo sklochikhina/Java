@@ -1,6 +1,6 @@
-package ru.nsu.Klochikhina.lab1502.task4.ui;
+package ru.nsu.klochikhina.lab1502.task4.ui;
 
-import ru.nsu.Klochikhina.lab1502.task4.model.Signal;
+import ru.nsu.klochikhina.lab1502.task4.model.Signal;
 
 import java.util.*;
 

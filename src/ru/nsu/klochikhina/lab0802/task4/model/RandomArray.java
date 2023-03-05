@@ -1,4 +1,4 @@
-package ru.nsu.Klochikhina.lab0802.task4.model;
+package ru.nsu.klochikhina.lab0802.task4.model;
 
 import java.util.Random;
 

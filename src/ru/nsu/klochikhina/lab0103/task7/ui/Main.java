@@ -1,9 +1,9 @@
-package ru.nsu.Klochikhina.lab0103.task7.ui;
+package ru.nsu.klochikhina.lab0103.task7.ui;
 
 import java.io.IOException;
 import java.util.*;
 
-import ru.nsu.Klochikhina.lab0103.task7.model.*;
+import ru.nsu.klochikhina.lab0103.task7.model.*;
 
 enum Mode{
     INCREASING,

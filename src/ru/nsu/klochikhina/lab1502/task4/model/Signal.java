@@ -1,4 +1,4 @@
-package ru.nsu.Klochikhina.lab1502.task4.model;
+package ru.nsu.klochikhina.lab1502.task4.model;
 
 public class Signal {
 

@@ -1,4 +1,4 @@
-package ru.nsu.Klochikhina.lab0103.task7.model;
+package ru.nsu.klochikhina.lab0103.task7.model;
 
 public enum Color {
     WHITE,

@@ -1,6 +1,6 @@
-package ru.nsu.Klochikhina.lab0802.task4.ui;
+package ru.nsu.klochikhina.lab0802.task4.ui;
 
-import ru.nsu.Klochikhina.lab0802.task4.model.RandomArray;
+import ru.nsu.klochikhina.lab0802.task4.model.RandomArray;
 
 import java.util.Scanner;
 
