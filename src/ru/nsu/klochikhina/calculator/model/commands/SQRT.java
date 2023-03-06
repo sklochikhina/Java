@@ -1,0 +1,15 @@
+package ru.nsu.klochikhina.calculator.model.commands;
+
+import ru.nsu.klochikhina.calculator.model.factory.Command;
+
+import java.io.IOException;
+import java.util.Stack;
+
+public class SQRT extends Command {
+    @Override
+    public void action(Stack<Double> stack) throws Exception {
+        if (stack.isEmpty())
+            throw new IOException("Ошибка: стек пуст!");
+        stack.push(Math.sqrt(stack.pop()));
+    }
+}
