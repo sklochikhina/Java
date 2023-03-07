@@ -4,7 +4,6 @@ import ru.nsu.klochikhina.calculator.model.factory.Command;
 
 import java.io.IOException;
 
-// TODO: реализовать поиск по карте
 public class DEFINE extends Command {
     @Override
     public void action(String... strings) throws Exception {
