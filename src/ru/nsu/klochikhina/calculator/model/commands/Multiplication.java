@@ -1,9 +1,7 @@
 package ru.nsu.klochikhina.calculator.model.commands;
 
 import ru.nsu.klochikhina.calculator.model.factory.Command;
-
 import java.io.IOException;
-import java.util.Stack;
 
 public class Multiplication extends Command {
     @Override
