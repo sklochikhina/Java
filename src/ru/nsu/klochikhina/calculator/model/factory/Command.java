@@ -1,9 +1,11 @@
 package ru.nsu.klochikhina.calculator.model.factory;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 public abstract class Command {
-    // общие методы для всех наследников
-    // абстрактные поля
-    public abstract void action(Stack<Double> stack) throws Exception;
+    protected static Stack<Double> stack = new Stack<>();
+    protected static Map<String, Double> defineList = new HashMap<>();
+    public abstract void action(String... strings) throws Exception;
 }

@@ -6,6 +6,7 @@ import java.util.*;
 public class Parsing {
     private final static ArrayList<String> commands =
             new ArrayList<>(Arrays.asList("#", "POP", "PUSH", "+", "-", "*", "/", "SQRT", "PRINT", "DEFINE"));
+
     public static void parsing() throws Exception {
         Scanner scanner = new Scanner(System.in);
         // TODO: System.out.println("Имя файла: ");
@@ -31,7 +32,11 @@ public class Parsing {
             throw new IOException("Команда введена неверно: передано слишком много значений.");
 
         switch (arr[0]) {
-
+            /*try {
+                Double.parseDouble(strings[0]);
+            } catch (NumberFormatException exception){
+                System.out.println("Значение " + strings[0]);
+            }*/
         }
 
         return true;

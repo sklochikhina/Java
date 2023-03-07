@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Multiplication extends Command {
     @Override
-    public void action(Stack<Double> stack) throws Exception {
+    public void action(String... strings) throws Exception {
         if (stack.isEmpty())
             throw new IOException("Ошибка: стек пуст!");
         else if (stack.size() == 1)

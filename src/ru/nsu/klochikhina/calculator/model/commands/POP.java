@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class POP extends Command {
     @Override
-    public void action(Stack<Double> stack) throws Exception {
+    public void action(String... strings) throws Exception {
         if (stack.isEmpty())
             throw new IOException("Ошибка: стек пуст!");
         stack.pop();

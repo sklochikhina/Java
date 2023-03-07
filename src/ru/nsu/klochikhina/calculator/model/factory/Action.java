@@ -1,4 +1,4 @@
-package ru.nsu.klochikhina.calculator.model.commands;
+package ru.nsu.klochikhina.calculator.model.factory;
 
 public enum Action {
     COMMENT,
