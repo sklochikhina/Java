@@ -1,7 +1,6 @@
 package ru.nsu.klochikhina.calculator.model.commands;
 
 import ru.nsu.klochikhina.calculator.model.factory.Command;
-
 import java.io.IOException;
 
 public class DEFINE extends Command {
