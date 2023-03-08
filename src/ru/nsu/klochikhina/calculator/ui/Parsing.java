@@ -10,12 +10,16 @@ public class Parsing {
     public static void parsing() throws Exception {
         Scanner scanner = new Scanner(System.in);
         // TODO: System.out.println("Имя файла: ");
-        String input = scanner.nextLine(); // без имени файла
 
-        while(LineCheck(input))
-            input = scanner.nextLine();
+        try {
+            String input = scanner.nextLine(); // без имени файла
+            while(LineCheck(input))
+                input = scanner.nextLine();
+        } catch (NoSuchElementException e){
 
-        scanner.close();
+        } finally {
+            scanner.close();
+        }
     }
 
     public static boolean LineCheck(String input) throws Exception {
@@ -34,8 +38,8 @@ public class Parsing {
         switch (arr[0]) {
             /*try {
                 Double.parseDouble(strings[0]);
-            } catch (NumberFormatException exception){
-                System.out.println("Значение " + strings[0]);
+            } catch (NumberFormatException e){
+                System.out.println(e.getMassage());
             }*/
         }
 
