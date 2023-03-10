@@ -34,4 +34,16 @@ public class Factory {
         }
         return null;
     }
+
+    public static String getCommandList(){
+        String commands = new String(
+                "Здравствуйте, я стековый калькулятор! Мои возможности:\n" +
+                "# - начало комментария;\n" +
+                "POP - снять число со стека;\n" +
+                "PUSH - положить чсило на стек;\n" +
+                "+, -, *, /, SQRT - доступные арифметические операции с элементами стека;\n" +
+                "PRINT - печать верхнего элемента стека;\n" +
+                "DEFINE - задать значение параметра.\n");
+        return commands;
+    }
 }
