@@ -16,6 +16,10 @@ public class Model {
         secondNumber = rand.nextInt(101);
     }
 
+    public boolean checkAnswer(int answer) {
+        return answer == (firstNumber + secondNumber);
+    }
+
     public int getFirstNumber() {
         return firstNumber;
     }

@@ -25,8 +25,7 @@ public class Controller {
             if (input == -1)
                 break;
 
-            boolean isCorrect = (input == firstNumber + secondNumber);
-            view.displayResult(isCorrect);
+            view.displayResult(model.checkAnswer(input));
         }
     }
 }
