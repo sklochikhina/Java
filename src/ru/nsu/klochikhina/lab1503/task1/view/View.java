@@ -1,26 +1,30 @@
 package ru.nsu.klochikhina.lab1503.task1.view;
 
-import java.util.Scanner;
+import ru.nsu.klochikhina.lab1503.task1.model.Model;
 
 public class View {
-    private final Scanner scanner;
-
-    public View() {
-        scanner = new Scanner(System.in);
+    public void update(Model model){
+        switch (model.getCondition()){
+            case 2: displayQuestion(model.getFirstNumber(), model.getSecondNumber()); break;
+            case -1: interrupt(); break;
+            case 1: rightAnswer(); break;
+            default: wrongAnswer(); break;
+        }
     }
 
     public void displayQuestion(int firstNumber, int secondNumber) {
         System.out.printf(firstNumber + " + " + secondNumber + " = ");
     }
 
-    public int getUserInput() {
-        return scanner.nextInt();
+    public void interrupt() {
+        System.out.println("Игра прервана. Чтобы начать заново, перезагрузите программу.");
     }
 
-    public void displayResult(boolean isCorrect) {
-        if (isCorrect)
-            System.out.println("Верно!");
-        else
-            System.out.println("Неверно!");
+    public void rightAnswer() {
+        System.out.println("Верно!");
+    }
+
+    public void wrongAnswer() {
+        System.out.println("Неверно!");
     }
 }
