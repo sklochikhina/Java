@@ -1,19 +1,18 @@
 package ru.nsu.klochikhina.lab1503.task1.view;
 
+import ru.nsu.klochikhina.lab1503.task1.model.Listener;
 import ru.nsu.klochikhina.lab1503.task1.model.Model;
 
-public class View {
-    public void update(Model model){
-        switch (model.getCondition()){
-            case 2: displayQuestion(model.getFirstNumber(), model.getSecondNumber()); break;
-            case -1: interrupt(); break;
-            case 1: rightAnswer(); break;
-            default: wrongAnswer(); break;
-        }
+public class View implements Listener {
+    private final Model model;
+
+    public View(Model model) {
+        this.model = model;
+        this.model.setListener(this);
     }
 
-    public void displayQuestion(int firstNumber, int secondNumber) {
-        System.out.printf(firstNumber + " + " + secondNumber + " = ");
+    public void noNumber(){
+        System.out.println("Вы ввели не целое число. Попробуйте ещё раз.");
     }
 
     public void interrupt() {
@@ -25,6 +24,19 @@ public class View {
     }
 
     public void wrongAnswer() {
-        System.out.println("Неверно!");
+        System.out.println("Неверно! Попробуйте ещё раз.");
+    }
+
+    @Override
+    public void checkAnswer() {
+        if(model.isAnswerCorrect())
+            rightAnswer();
+        else
+            wrongAnswer();
+    }
+
+    @Override
+    public void displayQuestion() {
+        System.out.printf(model.getFirstNumber() + " + " + model.getSecondNumber() + " = ");
     }
 }
