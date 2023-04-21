@@ -1,8 +1,8 @@
-package ru.nsu.klochikhina.lab1003.task1.ui;
+package main.java.ru.nsu.klochikhina.lab1003.task1.ui;
 
-import ru.nsu.klochikhina.lab1003.task1.model.Consumer;
-import ru.nsu.klochikhina.lab1003.task1.model.Producer;
-import ru.nsu.klochikhina.lab1003.task1.model.Storage;
+import main.java.ru.nsu.klochikhina.lab1003.task1.model.Consumer;
+import main.java.ru.nsu.klochikhina.lab1003.task1.model.Producer;
+import main.java.ru.nsu.klochikhina.lab1003.task1.model.Storage;
 
 import java.util.Scanner;
 

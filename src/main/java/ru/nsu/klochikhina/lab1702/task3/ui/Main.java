@@ -1,6 +1,6 @@
-package ru.nsu.klochikhina.lab1702.task3.ui;
+package main.java.ru.nsu.klochikhina.lab1702.task3.ui;
 
-import ru.nsu.klochikhina.lab1702.task3.model.INIFileRead;
+import main.java.ru.nsu.klochikhina.lab1702.task3.model.INIFileRead;
 
 import java.io.*;
 

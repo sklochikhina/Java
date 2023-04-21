@@ -1,4 +1,4 @@
-package ru.nsu.klochikhina.lab1702.task3.model;
+package main.java.ru.nsu.klochikhina.lab1702.task3.model;
 
 import java.io.*;
 

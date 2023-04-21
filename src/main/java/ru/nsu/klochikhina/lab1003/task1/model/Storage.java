@@ -1,4 +1,4 @@
-package ru.nsu.klochikhina.lab1003.task1.model;
+package main.java.ru.nsu.klochikhina.lab1003.task1.model;
 
 import java.util.ArrayList;
 
