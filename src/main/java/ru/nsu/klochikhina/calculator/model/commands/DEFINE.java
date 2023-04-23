@@ -12,7 +12,7 @@ public class DEFINE implements Command {
     @Override
     public void action(String... strings) throws Exception {
         if (defineList.containsKey(strings[0]))
-            throw new IOException("Значение " + strings[0] + " уже определено как " + defineList.get(strings[0]) + ".");
+            throw new IOException("Ошибка: значение " + strings[0] + " уже определено как " + defineList.get(strings[0]) + ".");
         else
             defineList.put(strings[0], Double.parseDouble(strings[1]));
     }
