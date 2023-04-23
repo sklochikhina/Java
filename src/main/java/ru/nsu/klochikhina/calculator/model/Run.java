@@ -27,9 +27,9 @@ public class Run {
             }
 
             Factory factory = new Factory();
-            Command command = factory.createCommand(arr, stack, defineList);
 
             try {
+                Command command = factory.createCommand(arr, stack, defineList);
                 switch (arr.length) {
                     case 1:
                         command.action();

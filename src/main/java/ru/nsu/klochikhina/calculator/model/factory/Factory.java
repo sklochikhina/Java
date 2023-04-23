@@ -55,13 +55,12 @@ public class Factory {
         return null;
     }
 
-    public boolean checkInput(String[] arr){
+    public boolean checkInput(String[] arr) {
         if(noParameterCommands.contains(arr[0]) && arr.length > 1)
             return false;
         else if (aFewParametersCommands.contains(arr[0]))
             return (!arr[0].equals("PUSH") || arr.length == 2) && (!arr[0].equals("DEFINE") || arr.length == 3);
-
-        return true;
+        else return noParameterCommands.contains(arr[0]) || aFewParametersCommands.contains(arr[0]);
     }
 
     public static String getCommandList(){
