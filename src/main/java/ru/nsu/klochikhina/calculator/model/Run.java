@@ -4,20 +4,21 @@ import main.java.ru.nsu.klochikhina.calculator.model.factory.Command;
 import main.java.ru.nsu.klochikhina.calculator.model.factory.Factory;
 import main.java.ru.nsu.klochikhina.calculator.ui.Parsing;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class Run {
     private final Stack<Double> stack;
     private final Map<String, Double> defineList;
+    private final Parsing pars;
 
     public Run(Stack<Double> stack, Map<String, Double> defineList) {
         this.stack = stack;
         this.defineList = defineList;
+        this.pars = new Parsing(chooseStream());
     }
 
     public boolean run() {
-        Parsing pars = new Parsing(null);
         try {
             String[] arr = pars.parsing();
 
@@ -54,9 +55,36 @@ public class Run {
         }
     }
 
-    /*public String fileName(){
-        System.out.print("Введите имя файла, в котором содержатся команды: ");
+    public InputStream chooseStream(){
         Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
-    }*/
+
+        System.out.print("Введите режим считывания данных: 1 - с консоли, 2 - с файла: ");
+
+        String input = scanner.nextLine().trim();
+
+        while (!input.matches("[1-2]")) {
+            System.err.print("Введите 1 или 2 в зависимости от желаемого режима: ");
+            input = scanner.nextLine();
+        }
+
+        if(input.matches("^[1]$"))
+            return System.in;
+        else {
+            System.out.print("Введите имя файла: ");
+            while (true) {
+                String fileName = scanner.nextLine().trim();
+                File file = new File(fileName);
+
+                if (file.exists() && file.isFile()) {
+                    try {
+                        return new FileInputStream(file);
+                    } catch (FileNotFoundException e) {
+                        // не должно возникать, поскольку мы проверили существование файла
+                        throw new RuntimeException(e);
+                    }
+                }
+                System.err.print("Файл с именем " + fileName + " не существует. Попробуйте еще раз: ");
+            }
+        }
+    }
 }
