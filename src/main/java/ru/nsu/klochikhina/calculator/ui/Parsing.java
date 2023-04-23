@@ -19,6 +19,8 @@ public class Parsing {
                 String input = scanner.nextLine().trim(); // без имени файла
                 if (input.isEmpty())
                     throw new IOException("Строка пуста!");
+                else if (input.equals("STOP"))
+                    return null;
                 return input.split("\\s+");
             }
         } catch (NoSuchElementException e){
